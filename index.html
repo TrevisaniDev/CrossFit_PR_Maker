@@ -13,7 +13,20 @@
         <p><input type="text" id="moviment" placeholder="Moviment (Ex. Snatch)"></p>
         <p><input type="number" id="weight" placeholder="Weight (kg)"></p>
         <button onclick="AddPR()">Save</button>
+
+        <ul id="prList" class="pr-list"></ul>
     </div>
-    
+
+    <div class="convert-section">
+        <h3>Weight Convertor</h3>
+        <p><input type="number" id="weightInput" placeholder="enter the weight"></p>
+        <select id="unit">
+            <option value="lbs">lbs for kg</option>
+            <option value="kgs">kgs for lbs</option>
+        </select>
+        
+        <button onclick="Convert()">Convert</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

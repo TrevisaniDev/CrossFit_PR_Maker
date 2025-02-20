@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", loadPRs);
             });
         }
         
+        function ClearPR(){
+            localStorage.removeItem("prs")
+            document.getElementById("prList").innerHTML = ""
+        }
+
         function Convert() {
             let weight = parseFloat(document.getElementById("weightInput").value);
             let unit = document.getElementById("unit").value;
@@ -41,3 +46,4 @@ document.addEventListener("DOMContentLoaded", loadPRs);
             }
             document.getElementById("result").textContent = `Resultado: ${result}`;
         }
+

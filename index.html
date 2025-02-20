@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossfit PR Marker</title>
+    <title>CrossFit PR Marker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>CrossFit PR Marker</h1>
+    <h1>CrossFit PR Tracker</h1>
+    
     <div class="pr-section">
-        <h3>Register Your PR:</h3>
-        <p><input type="text" id="movement" placeholder="Movement (Ex. Snatch)"></p>
-        <p><input type="number" id="weight" placeholder="Weight (kg)"></p>
-        <button onclick="AddPR()">Save</button>
-
+        <h3>Registrar PR</h3>
+        <p><input type="text" id="movement" placeholder="Movimento (Ex: Snatch)"></p>
+        <p><input type="number" id="weight" placeholder="Peso (kg)"></p>
+        <button onclick="addPR()">Save</button>
         <ul id="prList" class="pr-list"></ul>
     </div>
-
-    <div class="convert-section">
+    
+    <div class="converter-section">
         <h3>Weight Convertor</h3>
-        <p><input type="number" id="weightInput" placeholder="enter the weight"></p>
+        <p><input type="number" id="weightInput" placeholder="Enter the weight"></p>
         <select id="unit">
-            <option value="lbs">lbs for kg</option>
-            <option value="kgs">kgs for lbs</option>
+            <option value="lb">lb to kg</option>
+            <option value="kg">kg to lb</option>
         </select>
-        
-        <button onclick="Convert()">Convert</button>
+
+        <button onclick="Convert()">Converter</button>
+        <p id="result"></p>
     </div>
     <script src="script.js"></script>
 </body>

@@ -47,3 +47,16 @@ document.addEventListener("DOMContentLoaded", loadPRs);
             document.getElementById("result").textContent = `Resultado: ${result}`;
         }
 
+        function Calculate() {
+            let mvmt = document.getElementById("movementPercentage").value;
+            let percentage = document.getElementById("percentageInput").value;
+            let prs = JSON.parse(localStorage.getItem("prs")) || [];
+            let foundPR = prs.find(pr => pr.movement.toLowerCase() === mvmt.toLowerCase());
+            if (foundPR) {
+                let calculateWeight = (foundPR.weight * (percentage / 100)).toFixed(2);
+                document.getElementById("percentageResult").textContent = `Result: ${calculateWeight} kg`;
+            } else {
+                document.getElementById("percentageResult").textContent = "Movement not found"
+            }
+        }
+

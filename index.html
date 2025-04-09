@@ -13,8 +13,8 @@
         <h3>Register Your PR</h3>
         <p><input type="text" id="movement" placeholder="Movimento (Ex: Snatch)"></p>
         <p><input type="number" id="weight" placeholder="Peso (kg)"></p>
-        <button onclick="addPR()">Save</button>
-        <button onclick="ClearPR()">Clear PRs</button>
+        <button id="saveBtn" onclick="addPR()">Save</button>
+        <button id="clearBtn" onclick="ClearPR()">Clear PRs</button>
         <ul id="prList" class="pr-list"></ul>
     </div>
     
@@ -26,7 +26,7 @@
             <option value="kg">kg to lb</option>
         </select>
 
-        <button onclick="Convert()">Convert</button>
+        <button id="convertBtn" onclick="Convert()">Convert</button>
         <p id="result"></p>
     </div>
 
@@ -34,7 +34,8 @@
         <h3>Calculate Your Percentage</h3>
         <p><input type="text" id="movementPercentage" placeholder="Movement to calculate"></p>
         <p><input type="number" id="percentageInput" placeholder="Enter your percentage"></p>
-        <button onclick="Calculate()">Calculate</button>
+
+        <button id="calculateBtn" onclick="Calculate()">Calculate</button>
         <p id="percentageResult"></p>
     </div>
     <script src="script.js"></script>

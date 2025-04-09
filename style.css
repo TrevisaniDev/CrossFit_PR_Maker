@@ -1,4 +1,49 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
     
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
+
+.pr-list{
+    text-align: left;
+}
+.pr-section h3 {
+    font-weight: bold;
+    color: rgb(255, 136, 0);
+    text-shadow: 1px 1px 1px black;
+}
+#saveBtn {
+    background-color:rgb(255, 136, 0);
+    color: black;
+}
+#clearBtn{
+    background-color:rgb(255, 136, 0);
+    color: black;
+}
+
+.converter-section h3 {
+    color: rgb(255, 136, 0);
+    text-shadow: 1px 1px 1px black;
+}
+#unit{
+    background-color:rgb(255, 136, 0);
+    color: black;
+}
+#convertBtn{
+    background-color:rgb(255, 136, 0);
+    color: black;
+}
+
+.percentage-calculator h3 {
+    color: rgb(255, 136, 0);
+    text-shadow: 1px 1px 1px black;
+}
+#calculateBtn{
+    background-color:rgb(255, 136, 0);
+    color: black;
+}
+

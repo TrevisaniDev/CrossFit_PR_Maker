@@ -8,36 +8,38 @@
 </head>
 <body>
     <h1>CrossFit PR Tracker</h1>
+    <section>
+        <div class="pr-section">
+            <h3>Register Your PR</h3>
+            <p><input type="text" id="movement" placeholder="Movimento (Ex: Snatch)"></p>
+            <p><input type="number" id="weight" placeholder="Peso (kg)"></p>
+            <button id="saveBtn" onclick="addPR()">Save</button>
+            <button id="clearBtn" onclick="ClearPR()">Clear PRs</button>
+            <ul id="prList" class="pr-list"></ul>
+        </div>
+        
+        <div class="converter-section">
+            <h3>Weight Convertor</h3>
+            <p><input type="number" id="weightInput" placeholder="Enter the weight"></p>
+            <select id="unit">
+                <option value="lb">lb to kg</option>
+                <option value="kg">kg to lb</option>
+            </select>
     
-    <div class="pr-section">
-        <h3>Register Your PR</h3>
-        <p><input type="text" id="movement" placeholder="Movimento (Ex: Snatch)"></p>
-        <p><input type="number" id="weight" placeholder="Peso (kg)"></p>
-        <button id="saveBtn" onclick="addPR()">Save</button>
-        <button id="clearBtn" onclick="ClearPR()">Clear PRs</button>
-        <ul id="prList" class="pr-list"></ul>
-    </div>
+            <button id="convertBtn" onclick="Convert()">Convert</button>
+            <p id="result"></p>
+        </div>
     
-    <div class="converter-section">
-        <h3>Weight Convertor</h3>
-        <p><input type="number" id="weightInput" placeholder="Enter the weight"></p>
-        <select id="unit">
-            <option value="lb">lb to kg</option>
-            <option value="kg">kg to lb</option>
-        </select>
-
-        <button id="convertBtn" onclick="Convert()">Convert</button>
-        <p id="result"></p>
-    </div>
-
-    <div class="percentage-calculator">
-        <h3>Calculate Your Percentage</h3>
-        <p><input type="text" id="movementPercentage" placeholder="Movement to calculate"></p>
-        <p><input type="number" id="percentageInput" placeholder="Enter your percentage"></p>
-
-        <button id="calculateBtn" onclick="Calculate()">Calculate</button>
-        <p id="percentageResult"></p>
-    </div>
+        <div class="percentage-calculator">
+            <h3>Calculate Your Percentage</h3>
+            <p><input type="text" id="movementPercentage" placeholder="Movement to calculate"></p>
+            <p><input type="number" id="percentageInput" placeholder="Enter your percentage"></p>
+    
+            <button id="calculateBtn" onclick="Calculate()">Calculate</button>
+            <p id="percentageResult"></p>
+        </div>   
+    </section>
+    <img src="imagens/828_logo-extenso-laranja-e-preto-small.jpg" alt="Logo 828">
     <script src="script.js"></script>
 </body>
 </html>

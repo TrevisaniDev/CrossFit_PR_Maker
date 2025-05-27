@@ -1,3 +1,43 @@
+const translations = {
+    pt: {
+        title: "Registrador de PR de CrossFit",
+        register: "Registrar PR",
+        movementPlaceholder: "Movimento (Ex: Snatch)",
+        weightPalceholder: "Peso (kg)",
+        add: "Salvar",
+        clear: "Limpar PR",
+        converter: "Conversor de Peso",
+        enterWeight: "Digite o peso",
+        percentage: "Calcule sua Porcentagem",
+        calculate: "Calcular",
+        result: "Resultado",
+        movement: "Movimento",
+        enterPercent: "Digite a Porcentagem",
+        notFound: "Movimento não encontrado",
+    },
+
+    en: {
+        title: "CrossFit PR Tracker",
+        register: "Register Your PR",
+        movementPlaceholder: "Movement (e.g., Snatch)",
+        weightPlaceholder: "Weight (kg)",
+        add: "Add",
+        clear: "Clear PRs",
+        converter: "Weight Converter",
+        enterWeight: "Enter the weight",
+        calculate: "Calculate",
+        result: "Result",
+        percentage: "Calculate PR Percentage",
+        movement: "Movement",
+        enterPercent: "Enter the percentage",
+        notFound: "Movement not found."
+    }
+};
+
+function setLanguage(lang) {
+    
+}
+
 document.addEventListener("DOMContentLoaded", loadPRs);
  
         function addPR() {

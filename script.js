@@ -3,7 +3,7 @@ const translations = {
         title: "Registrador de PR de CrossFit",
         register: "Registrar PR",
         movementPlaceholder: "Movimento (Ex: Snatch)",
-        weightPalceholder: "Peso (kg)",
+        weightPlaceholder: "Peso (kg)",
         add: "Salvar",
         clear: "Limpar PR",
         converter: "Conversor de Peso",
@@ -27,15 +27,35 @@ const translations = {
         enterWeight: "Enter the weight",
         calculate: "Calculate",
         result: "Result",
-        percentage: "Calculate PR Percentage",
-        movement: "Movement",
+        percentage: "Calculate Your Percentage",
+        movement: "Movement to calculate",
         enterPercent: "Enter the percentage",
         notFound: "Movement not found."
     }
 };
 
 function setLanguage(lang) {
-    
+    document.title = translations[lang].title;
+    document.querySelector(h1).textContent = translations[lang].title;
+
+    document.getElementById(".pr-section h3").textContent = translations[lang].register;
+    document.getElementById("movement").placeholder = translations[lang].movementPlaceholder;
+    document.getElementById("weight").placeholder = translations[lang].weightPlaceholder
+
+    document.querySelector(".pr-section button").textContent = translations[lang].add;
+    document.querySelector(".pr-section button").textContent = translations[lang].clear;
+
+    document.querySelector(".converter-section h3").textContent = translations[lang].converter;
+    document.getElementById("weightInput").placeholder = translations[lang].enterWeight;
+    document.querySelector(".convert-section button").textContent = translations[lang].calculate; //Acredito q está errado, pois era pra traduzir o botão "converter" e não o de "calcular"
+
+    document.querySelector(".percentage-calculator h3").textContent = translations[lang].percentage;
+    document.getElementById("movementPercentage").placeholder = translations[lang].movement;
+    document.getElementById("percentageInput").placeholder = translations[lang].enterPercent;
+    //Agora aqui faltou o botão de "calcular" para traduzir, problema gerado provavelmente na linha 28
+
+    document.getElementById("languageLabel").textContent = lang.toUpperCase();
+    localStorage.setItem("lang", lang);
 }
 
 document.addEventListener("DOMContentLoaded", loadPRs);

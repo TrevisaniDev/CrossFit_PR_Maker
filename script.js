@@ -19,7 +19,7 @@ const translations = {
     en: {
         title: "CrossFit PR Tracker",
         register: "Register Your PR",
-        movementPlaceholder: "Movement (e.g., Snatch)",
+        movementPlaceholder: "Movement (e.x., Snatch)",
         weightPlaceholder: "Weight (kg)",
         add: "Add",
         clear: "Clear PRs",
@@ -36,27 +36,38 @@ const translations = {
 
 function setLanguage(lang) {
     document.title = translations[lang].title;
-    document.querySelector(h1).textContent = translations[lang].title;
+    document.querySelector("h1").textContent = translations[lang].title;
 
-    document.getElementById(".pr-section h3").textContent = translations[lang].register;
+    document.querySelector(".pr-section h3").textContent = translations[lang].register;
     document.getElementById("movement").placeholder = translations[lang].movementPlaceholder;
     document.getElementById("weight").placeholder = translations[lang].weightPlaceholder
 
-    document.querySelector(".pr-section button").textContent = translations[lang].add;
-    document.querySelector(".pr-section button").textContent = translations[lang].clear;
+    document.querySelector("saveBtn").textContent = translations[lang].add;
+    document.querySelector("cleanBtn").textContent = translations[lang].clear;
 
     document.querySelector(".converter-section h3").textContent = translations[lang].converter;
     document.getElementById("weightInput").placeholder = translations[lang].enterWeight;
-    document.querySelector(".convert-section button").textContent = translations[lang].calculate; //Acredito q está errado, pois era pra traduzir o botão "converter" e não o de "calcular"
+    document.querySelector(".converter-section button").textContent = translations[lang].calculate; //Acredito q está errado, pois era pra traduzir o botão "converter" e não o de "calcular"
 
     document.querySelector(".percentage-calculator h3").textContent = translations[lang].percentage;
     document.getElementById("movementPercentage").placeholder = translations[lang].movement;
     document.getElementById("percentageInput").placeholder = translations[lang].enterPercent;
-    //Agora aqui faltou o botão de "calcular" para traduzir, problema gerado provavelmente na linha 28
+    document.getElementById("calculateBtn").textContent = translations[lang].calculate;
 
     document.getElementById("languageLabel").textContent = lang.toUpperCase();
     localStorage.setItem("lang", lang);
 }
+
+document.getElementById("languageSwitch").addEventListener("change", function () {
+    const lang = this.checked ? "en" : "pt";
+    setLanguage(lang);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "en";
+    document.getElementById("languageSwitch").checked = savedLang === "en";
+    setLanguage(savedLang);
+})
 
 document.addEventListener("DOMContentLoaded", loadPRs);
  
